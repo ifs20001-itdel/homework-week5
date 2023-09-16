@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrasi</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Menggunakan Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="flex justify-between p-4">
+        <a href="/apps/registrasi.html" class="text-white font-bold">Registrasi</a>
+        <a href="/apps/listPendaftar.html" class="text-white hover:underline">List Pendaftar</a>
+    </nav>
+    <div class="container mx-auto w-2/3 mt-12">
+        <h1 class="text-center">Registrasi</h1>
+        <form method="POST" action="/assets/js/script.js" onsubmit="kirim()">
+            <div class="mb-4">
+                <label for="name" class="form-label">Nama :</label>
+                <input type="text" class="form-input" id="name" minlength="10" placeholder="Masukkan Nama Anda"
+                    name="nama">
+                <div id="errorName" class="text-red-500"></div>
+            </div>
+            <div class="mb-4">
+                <label for="umur" class="form-label">Umur :</label>
+                <input type="number" class="form-input" id="umur" placeholder="Masukkan Umur Anda" name="umur">
+                <div id="errorUmur" class="text-red-500"></div>
+            </div>
+            <div class="mb-4">
+                <label for="uang" class="form-label">Uang Sangu :</label>
+                <input type="number" class="form-input" id="uang" placeholder="Berapa Uang Sangu Anda" name="uang">
+                <div id="errorUang" class="text-red-500"></div>
+            </div>
+            <button type="button" class="submit-button" id="submitBtn" onclick="kirim()">Submit</button>
+        </form>
+    </div>
+    <script src="/assets/js/script.js"></script>
+</body>
+
+</html>
